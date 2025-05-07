@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hayaa Bina Trip Planner AI</title>
+
+  <!-- 100 % custom CSS – no frameworks -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ███  NAVBAR  ███ -->
+  <header class="navbar">
+    <nav class="navbar-container">
+      <a href="#" class="site-brand">Hayaa Bina</a>
+
+      <ul class="navbar-links" id="desktop-links">
+        <li><a href="#features">Features</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+
+      <div class="navbar-icons" id="desktop-icons">
+        <button aria-label="Notifications" class="icon-button">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11
+                     a6.002 6.002 0 00-4-5.659V4a2 2 0 10-4 0v1.341
+                     C7.67 6.165 6 8.245 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5
+                     m6 0v1a3 3 0 11-6 0v-1m6 0H9"/>
+          </svg>
+        </button>
+
+        <div class="profile-menu" id="profile-container">
+          <button id="profile-btn" aria-label="User Profile" class="icon-button">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M5.121 17.804A8.959 8.959 0 0112 15
+                       c2.21 0 4.243.895 5.879 2.343M15 11a3 3 0 11-6 0
+                       3 3 0 016 0z"/>
+            </svg>
+          </button>
+
+          <div id="profile-menu" class="dropdown-menu">
+            <ul>
+              <li><a href="#login">Login</a></li>
+              <li><a href="#settings">Settings</a></li>
+              <li><a href="#mychats">My Chats</a></li>
+              <li><a href="#manage-subscription">Manage Subscription</a></li>
+            </ul>
+            <hr>
+            <ul>
+              <li><a href="#about">About</a></li>
+              <li><a href="#contact">Contact</a></li>
+              <li><a href="#tos">Terms of Service</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <button class="navbar-toggle" id="nav-toggle">☰</button>
+    </nav>
+
+    <!-- Mobile-only menu -->
+    <div class="mobile-nav-menu" id="nav-menu">
+      <ul>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+    <!-- ███  HERO 1 – Greeting  ███ -->
+    <section class="hero-greeting">
+      <div class="container container-narrow text-center">
+        <h1>Hey, I’m Hayaa Bina – your personal trip planner</h1>
+        <p>Let me handle the travel planning – from flights to stays and
+           stress-free itineraries. Think of me as your travel‑savvy friend who
+           knows exactly what you need.</p>
+
+        <div class="hero-tabs">
+          <button class="hero-tab active">Ask Anything</button>
+          <button class="hero-tab">Hotels</button>
+        </div>
+
+        <!-- ▼▼▼  Search input with icon button  ▼▼▼ -->
+        <div class="search-input-wrapper">
+          <input class="hero-search-input" id="hero-input" type="text" placeholder="Tokyo in 6 days">
+          <button class="search-icon-btn" aria-label="Search">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M21 21l-4.35-4.35m0 0A7.5 7.5 0 104.5 4.5a7.5 7.5 0 0012.15 12.15z" />
+            </svg>
+          </button>
+        </div>
+        <!-- ▲▲▲  /search input  ▲▲▲ -->
+
+        <div class="quick-action-buttons">
+          <button class="button-outline"><span>🌍</span>Create a new trip</button>
+          <button class="button-outline"><span>🗺️</span>Plan South of France trip</button>
+          <button class="button-outline"><span>🎂</span>Birthday trip to Greece</button>
+          <button class="button-muted">More</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ███  HERO 2  ███ -->
+    <section class="hero-showcase">
+      <div class="container text-center">
+        <h1>Smarter, Safer, AI‑Powered Trip Planning</h1>
+        <p>At Hayaa Bina Trip Planner AI, we redefine travel planning by harnessing the power of artificial intelligence and machine learning. Based in the vibrant city of Cape Town, our mission is to offer a personalized travel experience that resonates with your unique interests. Our platform provides real-time navigation, cultural insights, and dynamic itineraries to enrich your journey. With features like fraud detection and a conversational chatbot assistant, we ensure that your travels are seamless and memorable.</p>
+        <a href="#features" class="btn-primary">Learn More</a>
+      </div>
+    </section>
+
+    <!-- ███  FEATURES  ███ -->
+    <section id="features" class="features-section">
+        <h2>Travel smart with AI assistance at your fingertips</h2>
+  
+        <div class="features-grid">
+          <!-- Each card now carries its own background via the CSS variable  -->
+          <article class="feature-card" style="--bg:url('5aeea8c6-1fb3-11f0-88ab-0242ac110002-iSV1zgy_Nr5JBv1bkhXNc.jpg')">
+            <div class="feature-content">
+              <h3>AI-Powered Personalization</h3>
+              <p>Itineraries adapt to your preferences &amp; learn from your feedback.</p>
+            </div>
+          </article>
+  
+          <article class="feature-card" style="--bg:url('5b72ed8e-1fb3-11f0-88ab-0242ac110002-oODVqtDEtL7XEeorbMGa_.jpg')">
+            <div class="feature-content">
+              <h3>Real-time navigation support</h3>
+              <p>Embedded Google Maps with live tracking &amp; optimized routing.</p>
+            </div>
+          </article>
+  
+          <article class="feature-card" style="--bg:url('5b595b08-1fb3-11f0-88ab-0242ac110002-tFzhz_nGcm0C3SdAx55Wr.jpg')">
+            <div class="feature-content">
+              <h3>Smart Itineraries and Cultural Insights</h3>
+              <p>Discover historical context &amp; local stories at every stop.</p>
+            </div>
+          </article>
+  
+          <!-- Add more cards by duplicating the block above and changing --bg + text -->
+        </div>
+      </section>
+
+
+    <!-- ███  PRICING  ███ -->
+<!-- ███  PRICING  ███ -->
+<section id="pricing" class="pricing-section">
+  <h2>Plans for every traveller</h2>
+
+  <!-- Billing switch -->
+  <div class="billing-toggle" aria-label="Billing period">
+    <input type="radio" name="billing" id="bill-monthly" checked>
+    <label for="bill-monthly">Monthly</label>
+
+    <input type="radio" name="billing" id="bill-yearly">
+    <label for="bill-yearly">Yearly <span class="badge">-15 %</span></label>
+
+    <span class="switch"></span>
+  </div>
+
+  <!-- Pricing cards -->
+  <div class="pricing-grid">
+    <!-- Free -->
+    <article class="pricing-card">
+      <h3>Free Explorer</h3>
+      <p class="price" data-monthly="0" data-yearly="0">R0</p>
+
+      <ul class="plan-features">
+        <li>Basic itineraries</li>
+        <li>In-app chat with Hayaa</li>
+        <li class="muted">Offline maps</li>
+      </ul>
+
+      <button class="btn-primary">Get Started</button>
+    </article>
+
+    <!-- Premium (highlighted) -->
+    <article class="pricing-card popular">
+      <span class="pop-label">Most&nbsp;popular</span>
+      <h3>Premium Voyager</h3>
+      <p class="price" data-monthly="99" data-yearly="999">R99</p>
+
+      <ul class="plan-features">
+        <li>Everything in Free</li>
+        <li>AI-driven planning</li>
+        <li>Offline maps &amp; downloads</li>
+        <li>Priority support</li>
+      </ul>
+
+      <button class="btn-primary">Start 14-day trial</button>
+    </article>
+
+    <!-- Enterprise -->
+    <article class="pricing-card">
+      <h3>Enterprise</h3>
+      <p class="price" data-monthly="—" data-yearly="—">Contact</p>
+
+      <ul class="plan-features">
+        <li>Custom API access</li>
+        <li>White-label solution</li>
+        <li>Dedicated success team</li>
+      </ul>
+
+      <button class="btn-primary">Contact Us</button>
+    </article>
+  </div>
+</section>
+
+
+    <!-- ███  ABOUT  ███ -->
+    <section id="about" class="about-section">
+      <h2>About Hayaa Bina</h2>
+      <p>
+        Hayaa Bina Trip Planner AI combines cutting‑edge machine learning and
+        NLP to craft personalized, culturally rich itineraries, powered by
+        real‑time Google Maps integration and a friendly AI chatbot to guide you
+        every step of the way.
+      </p>
+    </section>
+
+    <!-- ███  MAP + CHAT  ███ -->
+    <section class="map-chat-section">
+      <!-- Map block stays exactly as before -->
+      <div class="map-block">
+        <h3>Find Your Next Destination</h3>
+        <div class="map-wrapper">
+          <iframe
+            class="map-frame"
+            src="https://www.google.com/maps/embed/v1/view?key=AIzaSyBmAUHV7ZKH317Erq3BVSrBFXdj6D79zE0&center=-33.9258,18.4233&zoom=11"
+            allowfullscreen></iframe>
+        </div>
+      </div>
+
+      <!-- ★ Chatbot block – now interactive ★ -->
+      <div class="chat-block">
+        <h3>Chat with Hayaa</h3>
+
+        <div id="chatbot" class="chatbox">
+          <!-- Initial bot greeting -->
+          <div class="msg bot">
+            <div class="bubble">Hello! I’m Hayaa, your AI travel assistant. How can I help you plan today?</div>
+          </div>
+        </div>
+
+        <form id="chat-input-form" class="chat-input" autocomplete="off">
+          <input type="text" id="chat-message" placeholder="Type a message…" required>
+          <button type="submit" aria-label="Send" class="send-btn">
+            <!-- paper-plane icon -->
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/>
+            </svg>
+          </button>
+        </form>
+      </div>
+    </section>
+    <!-- ███  CONTACT  ███ -->
+    <section id="contact" class="contact-section">
+      <h2>Get in Touch</h2>
+      <form class="contact-form">
+        <input type="text"     placeholder="Your Name"  required>
+        <input type="email"    placeholder="Your Email" required>
+        <textarea rows="4"     placeholder="Message"    required></textarea>
+        <button type="submit"  class="btn-primary btn-block">Send Message</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer">
+    © 2025 Hayaa Bina Trip Planner AI. All rights reserved.
+  </footer>
+
+  <script src="scripts.js"></script>
+</body>
+</html>

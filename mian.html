@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hayaa Bina Trip Planner AI</title>
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-pVx2P0hQZBDz+LUSkZ9Zr+zFhHtW+Yyv1g+MEpYqQp3nFo0pG2bXzT3T5TfARiJc3Jx4zRE9YX2j5rY9Tqe84A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    /* Custom send button */
+    .send-btn {
+      position: absolute;
+      right: 1rem;
+      top: 50%;
+      transform: translateY(-50%);
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      opacity: 0.5;
+    }
+    .send-btn:hover:not([disabled]) { opacity: 1; }
+  </style>
+</head>
+<body class="bg-gray-50 font-sans text-gray-800">
+  <!-- Navigation -->
+  <header class="bg-white shadow fixed w-full z-20">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="#" class="text-2xl font-extrabold text-blue-600">Hayaa Bina</a>
+      <nav class="hidden md:flex space-x-8 uppercase font-medium">
+        <a href="#solutions" class="hover:text-blue-600">Solutions</a>
+        <a href="#pricing" class="hover:text-blue-600">Pricing</a>
+        <a href="#about" class="hover:text-blue-600">About Us</a>
+        <a href="#contact-full" class="hover:text-blue-600">Contact</a>
+      </nav>
+      <button id="nav-toggle" class="md:hidden text-2xl"><i class="fas fa-bars"></i></button>
+    </div>
+    <div id="nav-menu" class="hidden md:hidden bg-white border-t">
+      <a href="#solutions" class="block px-6 py-3 hover:bg-gray-100">Solutions</a>
+      <a href="#pricing" class="block px-6 py-3 hover:bg-gray-100">Pricing</a>
+      <a href="#about" class="block px-6 py-3 hover:bg-gray-100">About Us</a>
+      <a href="#contact-full" class="block px-6 py-3 hover:bg-gray-100">Contact</a>
+    </div>
+  </header>
+
+  <main class="pt-24">
+    <!-- Hero Section -->
+    <section class="bg-white py-16 border-b">
+      <div class="max-w-4xl mx-auto px-6 text-center relative">
+        <h1 class="text-4xl md:text-5xl font-bold mb-4">Hey, I’m Hayaa Bina<br><span class="text-blue-600">Your Personal Trip Planner</span></h1>
+        <p class="text-lg text-gray-600 mb-6">Let me handle the travel planning—from flights to stays to stress-free itineraries.</p>
+        <div class="mb-6 relative">
+          <textarea class="w-full md:w-3/4 lg:w-1/2 px-6 py-4 bg-gray-100 rounded-lg focus:ring-2 focus:ring-blue-300" rows="4" placeholder="Best way to explore Greece in 7 days"></textarea>
+          <button disabled class="send-btn"><i class="fas fa-paper-plane text-blue-600"></i></button>
+        </div>
+        <div class="flex flex-wrap justify-center gap-4">
+          <button class="px-5 py-2 bg-green-50 border-green-300 rounded-full text-green-600">Create a new trip</button>
+          <button class="px-5 py-2 bg-blue-50 border-blue-300 rounded-full text-blue-600">Plan South of France trip</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Solutions -->
+    <section id="solutions" class="bg-green-50 py-16">
+      <div class="max-w-6xl mx-auto px-6 text-center">
+        <p class="text-green-600 uppercase mb-2">Smart Travel Solutions</p>
+        <h2 class="text-3xl font-bold mb-8">Personalized trip planning at your fingertips</h2>
+        <div class="grid gap-8 md:grid-cols-3">
+          <div class="bg-white rounded shadow hover:shadow-lg">
+            <img src="/img/itinerary.jpg" class="w-full h-48 object-cover" alt="Itinerary"/>
+            <div class="p-6">
+              <h3 class="font-semibold mb-1">AI-Powered itinerary planning</h3>
+              <p>Create personalized plans tailored to you.</p>
+            </div>
+          </div>
+          <div class="bg-white rounded shadow hover:shadow-lg border-2 border-dashed border-green-600">
+            <img src="/img/navigation.jpg" class="w-full h-48 object-cover" alt="Navigation"/>
+            <div class="p-6">
+              <h3 class="font-semibold mb-1 text-green-600">Real-time navigation support</h3>
+              <p>Navigate effortlessly with instant guidance.</p>
+            </div>
+          </div>
+          <div class="bg-white rounded shadow hover:shadow-lg">
+            <img src="/img/chatbot.jpg" class="w-full h-48 object-cover" alt="Chatbot"/>
+            <div class="p-6">
+              <h3 class="font-semibold mb-1">Conversational chatbot assistant</h3>
+              <p>Get on-the-go travel support anytime.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing -->
+    <section id="pricing" class="bg-gray-50 py-16">
+      <div class="max-w-5xl mx-auto px-6 text-center">
+        <h2 class="text-3xl font-bold mb-8">Pricing Plans</h2>
+        <div class="grid gap-6 md:grid-cols-3">
+          <div class="p-6 bg-white rounded shadow">
+            <h3 class="text-2xl font-semibold mb-4">Free</h3>
+            <p class="mb-4">Basic itineraries & limited support</p>
+            <p class="text-4xl font-bold mb-4">$0</p>
+            <button class="bg-blue-600 text-white py-2 px-6 rounded">Select</button>
+          </div>
+          <div class="p-6 bg-white rounded shadow-lg border-2 border-blue-600">
+            <h3 class="text-2xl font-semibold mb-4">Pro</h3>
+            <p class="mb-4">Full AI planning & real-time updates</p>
+            <p class="text-4xl font-bold mb-4">$9.99/mo</p>
+            <button class="bg-blue-600 text-white py-2 px-6 rounded">Select</button>
+          </div>
+          <div class="p-6 bg-white rounded shadow">
+            <h3 class="text-2xl font-semibold mb-4">Business</h3>
+            <p class="mb-4">Team access & enterprise API</p>
+            <p class="text-4xl font-bold mb-4">Contact Us</p>
+            <button class="bg-blue-600 text-white py-2 px-6 rounded">Contact</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="py-16">
+      <div class="max-w-4xl mx-auto px-6 text-center">
+        <h2 class="text-3xl font-bold mb-6">About Us</h2>
+        <p>We blend AI with historical insights to craft personalized journeys. Whether solo or group, our platform adapts in real-time for seamless travel experiences.</p>
+      </div>
+    </section>
+
+    <!-- Full Contact Section -->
+    <section id="contact-full" class="py-16 bg-white">
+      <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12">
+        <!-- Form -->
+        <div>
+          <h2 class="text-2xl font-bold mb-4">Get in touch</h2>
+          <p class="mb-6">We're here to assist you!</p>
+          <form class="space-y-4" method="POST" action="https://b12.io/contact/send/">
+            <input type="text" name="name" placeholder="Jane Smith" required class="w-full border rounded px-3 py-2" />
+            <input type="email" name="from_email" placeholder="email@website.com" required class="w-full border rounded px-3 py-2" />
+            <input type="tel" name="from_phone" placeholder="555-555-5555" required class="w-full border rounded px-3 py-2" />
+            <textarea name="message" rows="4" placeholder="Your message" class="w-full border rounded px-3 py-2"></textarea>
+            <label class="inline-flex items-center">
+              <input type="checkbox" name="gdpr_consent" required class="form-checkbox" />
+              <span class="ml-2">I allow this website to store my submission so they can respond. *</span>
+            </label>
+            <button type="submit" class="bg-blue-600 text-white py-2 px-6 rounded">Submit</button>
+          </form>
+        </div>
+        <!-- Details -->
+        <div class="space-y-6">
+          <div>
+            <h3 class="text-xl font-semibold mb-1">Contact</h3>
+            <p><i class="fas fa-envelope mr-2"></i><a href="mailto:nouhtourcpt@gmail.com">nouhtourcpt@gmail.com</a></p>
+          </div>
+          <div>
+            <h3 class="text-xl font-semibold mb-1">Location</h3>
+            <p><i class="fas fa-map-marker-alt mr-2"></i><a href="https://goo.gl/maps/example" target="_blank">Cape Town, WC ZA</a></p>
+          </div>
+          <div>
+            <h3 class="text-xl font-semibold mb-1">Hours</h3>
+            <ul class="list-none">
+              <li>Mon–Fri: 9:00am–10:00pm</li>
+              <li>Sat: 9:00am–6:00pm</li>
+              <li>Sun: 9:00am–12:00pm</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-100 py-12">
+      <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-8 text-gray-700">
+        <div>
+          <h4 class="font-semibold mb-4">Company</h4>
+          <ul class="space-y-2"><li><a href="#about" class="hover:text-blue-600">About</a></li><li><a href="#contact-full" class="hover:text-blue-600">Contact</a></li></ul>
+        </div>
+        <div>
+          <h4 class="font-semibold mb-4">Product</h4>
+          <ul class="space-y-2"><li><a href="#hotels" class="hover:text-blue-600">Hotels</a></li><li><a href="#roam" class="hover:text-blue-600">Roam Around</a></li></ul>
+        </div>
+        <div>
+          <h4 class="font-semibold mb-4">Legal</h4>
+          <ul class="space-y-2"><li><a href="#privacy" class="hover:text-blue-600">Privacy</a></li><li><a href="#terms" class="hover:text-blue-600">Terms</a></li></ul>
+        </div>
+        <div>
+          <h4 class="font-semibold mb-4">Top Countries</h4>
+          <ul class="space-y-2"><li><a href="#" class="hover:text-blue-600">Spain</a></li><li><a href="#" class="hover:text-blue-600">Italy</a></li></ul>
+        </div>
+        <div>
+          <h4 class="font-semibold mb-4">Plan</h4>
+          <ul class="space-y-2"><li><a href="#couple" class="hover:text-blue-600">Couple Planner</a></li><li><a href="#family" class="hover:text-blue-600">Family Planner</a></li></ul>
+        </div>
+      </div>
+      <div class="max-w-6xl mx-auto px-6 mt-8 flex flex-col md:flex-row items-center justify-between text-gray-600">
+        <p>&copy; 2025 Hayaa Bina Trip Planner AI</p>
+        <div class="flex space-x-4 mt-4 md:mt-0">
+          <a href="#"><i class="fab fa-instagram fa-lg"></i></a>
+          <a href="#"><i class="fab fa-linkedin fa-lg"></i></a>
+          <a href="#"><i class="fab fa-youtube fa-lg"></i></a>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <!-- Scripts -->
+  <script>
+    document.getElementById('nav-toggle').addEventListener('click', () => {
+      document.getElementById('nav-menu').classList.toggle('hidden');
+    });
+  </script>
+</body>
+</html>
