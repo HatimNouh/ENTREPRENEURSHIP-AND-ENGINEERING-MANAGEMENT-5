@@ -62,6 +62,13 @@ img,svg{display:block;max-width:100%}
 .icon-button {
   color: #000; /* or var(--gray-800) */
 }
+.logo-img {
+  height: 32px;
+  width: auto;
+  margin-right: 0.5rem;
+  vertical-align: middle;
+  display: inline-block;
+}
 
 .navbar-container{
   display:flex;
