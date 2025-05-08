@@ -148,7 +148,10 @@ img,svg{display:block;max-width:100%}
    HERO 1 – GREETING
    ===================================================== */
 section{padding:5rem 0;}
-.hero-greeting{background:#fff;}
+.hero-greeting{
+  background: url('hero-bg.jpg') center/cover no-repeat;
+  color: white; /* optional for contrast */
+}
 .hero-greeting h1{font-size:2.25rem;font-weight:700;margin:0 0 1rem;}
 @media (min-width:768px){.hero-greeting h1{font-size:3rem;}}
 .hero-greeting p{font-size:1.125rem;margin:0 0 1.5rem;}
