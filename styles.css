@@ -49,11 +49,20 @@ img,svg{display:block;max-width:100%}
    NAVIGATION BAR
    ===================================================== */
 .navbar{
-  position:fixed;top:0;left:0;width:100%;
-  background:#fff;
-  box-shadow:var(--shadow-md);
-  z-index:10;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(8px);
+  box-shadow: var(--shadow-md);
+  z-index: 10;
 }
+.navbar a,
+.icon-button {
+  color: #000; /* or var(--gray-800) */
+}
+
 .navbar-container{
   display:flex;
   justify-content:space-between;
