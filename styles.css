@@ -42,7 +42,7 @@ body{
 img,svg{display:block;max-width:100%}
 
 .text-center{text-align:center!important;}
-.container-narrow{max-width:60rem;}
+.container-narrow{max-width:1200px;}
 .container{max-width:1200px;margin:0 auto;padding:0 1.5rem;}
 
 /* =====================================================
@@ -151,7 +151,18 @@ section{padding:5rem 0;}
 .hero-greeting{
   background: url('hero-bg.jpg') center/cover no-repeat;
   color: white; /* optional for contrast */
-}
+  position: relative;
+  z-index: 0;
+  }
+  
+  .hero-greeting::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.3); /* semi-transparent black */
+    z-index: -1;
+  }
+  
 .hero-greeting h1{font-size:2.25rem;font-weight:700;margin:0 0 1rem;}
 @media (min-width:768px){.hero-greeting h1{font-size:3rem;}}
 .hero-greeting p{font-size:1.125rem;margin:0 0 1.5rem;}
